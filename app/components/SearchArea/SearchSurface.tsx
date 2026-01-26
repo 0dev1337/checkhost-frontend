@@ -2,7 +2,7 @@ import { Surface } from "@heroui/react";
 import LogoDark from "../../../public/pngs/mainlogo-dark.png";
 import Image from "next/image";
 import SearchBox from "./SearchBox";
-
+import ActionButtons from "./ActionButtons";
 export function SearchSurface() {
   return (
     <div className="flex justify-center px-4">
@@ -22,15 +22,18 @@ export function SearchSurface() {
             height={48} // Define explicit height
             className="w-12 h-auto object-contain" // Small size (3rem/48px)
           />
-          <div>
+          <div className="ml-5">
             <SearchBox />
+            <div className="mt-2">
+              <ActionButtons />
+            </div>
             {/* <h3 className="text-base font-semibold text-foreground">
               Surface Content
             </h3> */}
 
-            <p className="mt-2 text-sm text-muted">
+            {/* <p className="mt-2 text-sm text-muted">
               This is a default surface variant. It uses bg-surface styling.
-            </p>
+            </p> */}
           </div>
         </div>
       </Surface>

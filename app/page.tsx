@@ -1,5 +1,4 @@
-import SearchSurface from "./components/navbar/SearchSurface";
-
+import SearchSurface from "./components/SearchArea/SearchSurface";
 export default function Home() {
   return (
     <>

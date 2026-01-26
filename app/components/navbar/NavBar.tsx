@@ -4,8 +4,8 @@ import eye from "../../../public/icons/eye.svg";
 import Image from "next/image";
 
 const NavBar = () => {
-  const ip = "192.168.1.1"; // Example IP address
-  const country = "United States"; // Example country
+  const ip = "192.168.1.1";
+  const country = "United States";
 
   const [isVisible, setIsVisible] = useState(true);
   return (
@@ -13,7 +13,7 @@ const NavBar = () => {
       <Image
         src={eye}
         alt="CheckHost Logo"
-        className="w-6 h-6 dark:invert cursor-pointer" // Add cursor-pointer for clickability
+        className="w-6 h-6 dark:invert cursor-pointer"
         onClick={() => setIsVisible((prev) => !prev)}
       />
       <h1 className="text-base underline text-foreground px-2 py-1 rounded-md">
