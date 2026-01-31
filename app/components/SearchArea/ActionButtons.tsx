@@ -4,7 +4,7 @@ const ActionButtons = () => {
   return (
     <ButtonGroup
       hideSeparator
-      className="gap-2 text-muted flex flex-wrap w-full"
+      className="gap-4 text-muted flex flex-wrap w-full"
     >
       <Button
         variant="tertiary"
@@ -41,6 +41,18 @@ const ActionButtons = () => {
         className="rounded-md text-muted flex-1 min-w-fit"
       >
         BGP
+      </Button>
+      <Button
+        variant="secondary"
+        className="rounded-md text-muted flex-1 min-w-fit"
+      >
+        IPv6
+      </Button>
+      <Button
+        variant="secondary"
+        className="rounded-md text-muted flex-1 min-w-fit"
+      >
+        Whois
       </Button>
     </ButtonGroup>
   );

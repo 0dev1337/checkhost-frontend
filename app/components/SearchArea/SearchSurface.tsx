@@ -9,9 +9,9 @@ export function SearchSurface() {
       <Surface
         variant="default"
         className="
-          w-full max-w-xl
-          sm:max-w-2xl
-          rounded-3xl p-4 sm:p-6
+          w-full max-w-4xl
+          sm:max-w-4xl
+          rounded-4xl p-4 sm:p-6
         "
       >
         <div className="flex flex-row gap-4">
@@ -27,13 +27,6 @@ export function SearchSurface() {
             <div className="mt-2">
               <ActionButtons />
             </div>
-            {/* <h3 className="text-base font-semibold text-foreground">
-              Surface Content
-            </h3> */}
-
-            {/* <p className="mt-2 text-sm text-muted">
-              This is a default surface variant. It uses bg-surface styling.
-            </p> */}
           </div>
         </div>
       </Surface>
