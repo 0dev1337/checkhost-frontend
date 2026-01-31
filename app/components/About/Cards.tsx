@@ -20,7 +20,7 @@ const Cards = ({ title, description }: Props) => {
           rel="noopener noreferrer"
           target="_blank"
         >
-          UnGay Button
+          Open
           <Link.Icon aria-hidden="true" />
         </Link>
       </Card.Footer>
