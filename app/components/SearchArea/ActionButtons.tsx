@@ -14,17 +14,20 @@ const ActionButtons = () => {
       </Button>
       <Button
         variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'>
+        className='rounded-md text-muted flex-1 min-w-fit'
+        onClick={() => (window.location.href = "/dashboard/ping")}>
         Ping
       </Button>
       <Button
         variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'>
+        className='rounded-md text-muted flex-1 min-w-fit'
+        onClick={() => (window.location.href = "/dashboard/http")}>
         HTTP
       </Button>
       <Button
         variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'>
+        className='rounded-md text-muted flex-1 min-w-fit'
+        onClick={() => (window.location.href = "/dashboard/tcp")}>
         TCP Port
       </Button>
       <Button

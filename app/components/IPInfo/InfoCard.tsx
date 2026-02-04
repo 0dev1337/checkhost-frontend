@@ -27,7 +27,12 @@ const InfoCard = () => {
       <Surface
         variant='default'
         className='w-full max-w-4xl rounded-4xl p-4 sm:p-6'>
-        <p style={{ whiteSpace: "pre-line" }}>{description}</p>
+        <div className='flex justify-center px-4 font-bold text-xl'>
+          IP and Website Location
+        </div>
+        <p className='mt-5' style={{ whiteSpace: "pre-line" }}>
+          {description}
+        </p>
       </Surface>
     </div>
   );
