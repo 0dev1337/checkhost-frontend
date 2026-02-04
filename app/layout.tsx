@@ -4,6 +4,7 @@ import "./globals.css";
 
 // Verify this path is correct for your project structure
 import NavBar from "./components/navbar/NavBar";
+import SearchSurface from "./components/SearchArea/SearchSurface";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,34 +30,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" data-theme="dark" suppressHydrationWarning>
+    <html lang='en' className='dark' data-theme='dark' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div
           className={[
             "min-h-screen text-foreground", // Restored exact class list from your request
             "grid grid-rows-[auto_1fr] grid-cols-1",
             hasSidebar ? "lg:grid-cols-[250px_1fr]" : "lg:grid-cols-1",
-          ].join(" ")}
-        >
+          ].join(" ")}>
           {/* Navbar Area - No border */}
           <nav className={hasSidebar ? "lg:col-span-2" : ""}>
-            <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8 py-2">
+            <div className='mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8 py-2'>
               <NavBar />
             </div>
           </nav>
 
           {/* Sidebar Area */}
           {hasSidebar && (
-            <aside className="hidden lg:block">
-              <div className="px-4 py-6">Sidebar</div>
+            <aside className='hidden lg:block'>
+              <div className='px-4 py-6'>Sidebar</div>
             </aside>
           )}
 
           {/* Main Content Area */}
           <main>
-            <div className="mx-auto w-full max-w-xl sm:max-w-3xl lg:max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className='mx-auto w-full max-w-xl sm:max-w-3xl lg:max-w-7xl px-4 sm:px-6 lg:px-8'>
+              <SearchSurface />
               {children}
             </div>
           </main>
