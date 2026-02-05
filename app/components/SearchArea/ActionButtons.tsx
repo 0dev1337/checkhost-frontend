@@ -32,22 +32,26 @@ const ActionButtons = () => {
       </Button>
       <Button
         variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'>
+        className='rounded-md text-muted flex-1 min-w-fit'
+        onClick={() => (window.location.href = "/dashboard/traceroute")}>
         Traceroute
       </Button>
       <Button
         variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'>
+        className='rounded-md text-muted flex-1 min-w-fit'
+        onClick={() => (window.location.href = "/dashboard/bgp")}>
         BGP
       </Button>
       <Button
         variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'>
+        className='rounded-md text-muted flex-1 min-w-fit'
+        onClick={() => (window.location.href = "/dashboard/ipv6")}>
         IPv6
       </Button>
       <Button
         variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'>
+        className='rounded-md text-muted flex-1 min-w-fit'
+        onClick={() => (window.location.href = "/dashboard/radb")}>
         Whois
       </Button>
     </ButtonGroup>
