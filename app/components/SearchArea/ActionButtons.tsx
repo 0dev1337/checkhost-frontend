@@ -3,66 +3,58 @@ import { Button, ButtonGroup } from "@heroui/react";
 
 const ActionButtons = () => {
   return (
-    <ButtonGroup
-      hideSeparator
-      className="gap-4 text-muted flex flex-wrap w-full"
-    >
-      <Button
+    // let this container grow and not be limited by max-w
+    <div className="w-full">
+      <ButtonGroup
+        fullWidth
+        // remove max-width limiter, keep square edges
+        className="w-full [&>button:first-child]:rounded-none [&>button:last-child]:rounded-none"
         variant="tertiary"
-        className="rounded-md text-muted flex-1 min-w-fit"
-        onClick={() => (window.location.href = "/dashboard/ipinfo")}
       >
-        Info
-      </Button>
-      <Button
-        variant="secondary"
-        className="rounded-md text-muted flex-1 min-w-fit"
-        onClick={() => (window.location.href = "/dashboard/ping")}
-      >
-        Ping
-      </Button>
-      <Button
-        variant="secondary"
-        className="rounded-md text-muted flex-1 min-w-fit"
-        onClick={() => (window.location.href = "/dashboard/http")}
-      >
-        HTTP
-      </Button>
-      <Button
-        variant="secondary"
-        className="rounded-md text-muted flex-1 min-w-fit"
-        onClick={() => (window.location.href = "/dashboard/tcp")}
-      >
-        TCP Port
-      </Button>
-      {/* <Button
-        variant='secondary'
-        className='rounded-md text-muted flex-1 min-w-fit'
-        onClick={() => (window.location.href = "/dashboard/traceroute")}>
-        Traceroute
-      </Button> */}
-      <Button
-        variant="secondary"
-        className="rounded-md text-muted flex-1 min-w-fit"
-        onClick={() => (window.location.href = "/dashboard/bgp")}
-      >
-        BGP
-      </Button>
-      <Button
-        variant="secondary"
-        className="rounded-md text-muted flex-1 min-w-fit"
-        onClick={() => (window.location.href = "/dashboard/ipv6")}
-      >
-        IPv6
-      </Button>
-      <Button
-        variant="secondary"
-        className="rounded-md text-muted flex-1 min-w-fit"
-        onClick={() => (window.location.href = "/dashboard/radb")}
-      >
-        Whois
-      </Button>
-    </ButtonGroup>
+        <Button
+          className="flex-1 min-w-0"
+          onClick={() => (window.location.href = "/dashboard/ipinfo")}
+        >
+          Info
+        </Button>
+        <Button
+          className="flex-1 min-w-0"
+          onClick={() => (window.location.href = "/dashboard/ping")}
+        >
+          Ping
+        </Button>
+        <Button
+          className="flex-1 min-w-0"
+          onClick={() => (window.location.href = "/dashboard/http")}
+        >
+          HTTP
+        </Button>
+        <Button
+          className="flex-1 min-w-0"
+          onClick={() => (window.location.href = "/dashboard/tcp")}
+        >
+          TCP Port
+        </Button>
+        <Button
+          className="flex-1 min-w-0"
+          onClick={() => (window.location.href = "/dashboard/bgp")}
+        >
+          BGP
+        </Button>
+        <Button
+          className="flex-1 min-w-0"
+          onClick={() => (window.location.href = "/dashboard/ipv6")}
+        >
+          IPv6
+        </Button>
+        <Button
+          className="flex-1 min-w-0"
+          onClick={() => (window.location.href = "/dashboard/radb")}
+        >
+          Whois
+        </Button>
+      </ButtonGroup>
+    </div>
   );
 };
 
