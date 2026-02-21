@@ -90,3 +90,12 @@
   --warning-foreground: oklch(21.03% 0.0059 76.34);
 }
 
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;   /* IE/Edge legacy */
+    scrollbar-width: none;      /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;              /* Chrome/Safari */
+  }
+}

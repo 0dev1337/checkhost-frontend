@@ -1,5 +1,7 @@
 import { Surface, Separator } from "@heroui/react";
 import { Server } from "lucide-react";
+import { File } from "lucide-react";
+
 import React from "react";
 
 const data = [
@@ -18,7 +20,8 @@ const Results = () => {
   return (
     <div className="flex justify-center px-4">
       <Surface
-        className="w-full max-w-4xl rounded-4xl p-4 sm:p-6"
+        className="w-full max-w-4xl rounded-4xl p-4 sm:p-6
+        border border-dashed border-indigo-300/40"
         variant="default"
       >
         {/* Header */}

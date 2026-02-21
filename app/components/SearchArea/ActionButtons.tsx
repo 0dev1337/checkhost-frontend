@@ -1,61 +1,53 @@
 "use client";
 import { Button, ButtonGroup } from "@heroui/react";
 
-const ActionButtons = () => {
+const tabs = [
+  { label: "Info", href: "/dashboard/ipinfo" },
+  { label: "Ping", href: "/dashboard/ping" },
+  { label: "HTTP", href: "/dashboard/http" },
+  { label: "TCP Port", href: "/dashboard/tcp" },
+  { label: "BGP", href: "/dashboard/bgp" },
+  { label: "IPv6", href: "/dashboard/ipv6" },
+  { label: "Whois", href: "/dashboard/radb" },
+];
+
+export default function ActionButtons() {
   return (
-    // let this container grow and not be limited by max-w
     <div className="w-full">
-      <ButtonGroup
-        fullWidth
-        // remove max-width limiter, keep square edges
-        className="w-full [&>button:first-child]:rounded-none [&>button:last-child]:rounded-none"
-        variant="tertiary"
-      >
-        <Button
-          className="flex-1 min-w-0"
-          onClick={() => (window.location.href = "/dashboard/ipinfo")}
+      {/* Mobile: real horizontal scroller */}
+      <div className="sm:hidden w-full min-w-0">
+        <div className="flex flex-wrap gap-2">
+          {tabs.map((t) => (
+            <Button
+              key={t.href}
+              variant="tertiary"
+              className="whitespace-nowrap"
+              onClick={() => (window.location.href = t.href)}
+            >
+              {t.label}
+            </Button>
+          ))}
+        </div>
+      </div>
+
+      {/* sm+ : grouped full-width */}
+      <div className="hidden sm:block">
+        <ButtonGroup
+          fullWidth
+          variant="tertiary"
+          className="w-full [&>button:first-child]:rounded-none [&>button:last-child]:rounded-none"
         >
-          Info
-        </Button>
-        <Button
-          className="flex-1 min-w-0"
-          onClick={() => (window.location.href = "/dashboard/ping")}
-        >
-          Ping
-        </Button>
-        <Button
-          className="flex-1 min-w-0"
-          onClick={() => (window.location.href = "/dashboard/http")}
-        >
-          HTTP
-        </Button>
-        <Button
-          className="flex-1 min-w-0"
-          onClick={() => (window.location.href = "/dashboard/tcp")}
-        >
-          TCP Port
-        </Button>
-        <Button
-          className="flex-1 min-w-0"
-          onClick={() => (window.location.href = "/dashboard/bgp")}
-        >
-          BGP
-        </Button>
-        <Button
-          className="flex-1 min-w-0"
-          onClick={() => (window.location.href = "/dashboard/ipv6")}
-        >
-          IPv6
-        </Button>
-        <Button
-          className="flex-1 min-w-0"
-          onClick={() => (window.location.href = "/dashboard/radb")}
-        >
-          Whois
-        </Button>
-      </ButtonGroup>
+          {tabs.map((t) => (
+            <Button
+              key={t.href}
+              className="flex-1 min-w-0"
+              onClick={() => (window.location.href = t.href)}
+            >
+              {t.label}
+            </Button>
+          ))}
+        </ButtonGroup>
+      </div>
     </div>
   );
-};
-
-export default ActionButtons;
+}

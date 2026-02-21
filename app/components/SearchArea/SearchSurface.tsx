@@ -5,13 +5,15 @@ import SearchBox from "./SearchBox";
 import ActionButtons from "./ActionButtons";
 export function SearchSurface() {
   return (
-    <div className="flex justify-center px-4">
+    <div className="flex justify-center px-4 ">
       <Surface
         variant="default"
         className="
           w-full max-w-4xl
           sm:max-w-4xl
           rounded-4xl p-4 sm:p-6
+          min-w-0
+          
         "
       >
         <div className="flex flex-row gap-4 items-start">
@@ -24,11 +26,11 @@ export function SearchSurface() {
           />
 
           {/* make this column grow and fill */}
-          <div className="ml-5 flex-1">
+          <div className="flex-1 w-full min-w-0">
             <SearchBox />
 
             {/* ensure full width for buttons */}
-            <div className="mt-2 w-full">
+            <div className="mt-2 min-w-0">
               <ActionButtons />
             </div>
           </div>
