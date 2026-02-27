@@ -1,12 +1,10 @@
-import RadbSurface from "@/app/components/Radb/RadbSurface";
-import React from "react";
+import DescriptionPanel from "@/components/description-panel";
+import { DESCRIPTION_PANELS } from "@/lib/constants";
 
-const page = () => {
+export default function RadbPage() {
   return (
-    <div className='mt-5'>
-      <RadbSurface />
+    <div className="mt-5">
+      <DescriptionPanel {...DESCRIPTION_PANELS.radb} />
     </div>
   );
-};
-
-export default page;
+}

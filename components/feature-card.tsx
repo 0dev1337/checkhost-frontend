@@ -1,20 +1,19 @@
 import { Card, Link } from "@heroui/react";
+import type { Feature } from "@/lib/types";
 
-export interface Props {
-  title: string;
-  description: string;
-}
-
-const Cards = ({ title, description }: Props) => {
+/**
+ * A single feature card displayed in the home-page grid.
+ */
+export default function FeatureCard({ title, description }: Feature) {
   return (
-    <Card className="" variant="secondary">
+    <Card variant="secondary">
       <Card.Header>
         <Card.Title>{title}</Card.Title>
         <Card.Description>{description}</Card.Description>
       </Card.Header>
       <Card.Footer>
         <Link
-          aria-label="Go to Acme Creator Hub (opens in new tab)"
+          aria-label={`Learn more about ${title}`}
           href="https://heroui.com"
           rel="noopener noreferrer"
           target="_blank"
@@ -25,6 +24,4 @@ const Cards = ({ title, description }: Props) => {
       </Card.Footer>
     </Card>
   );
-};
-
-export default Cards;
+}

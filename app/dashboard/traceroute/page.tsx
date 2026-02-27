@@ -1,12 +1,10 @@
-import TraceRouteSurface from "@/app/components/TraceRoute/TraceRouteSurface";
-import React from "react";
+import DescriptionPanel from "@/components/description-panel";
+import { DESCRIPTION_PANELS } from "@/lib/constants";
 
-const page = () => {
+export default function TraceroutePage() {
   return (
-    <div className='mt-5'>
-      <TraceRouteSurface />
+    <div className="mt-5">
+      <DescriptionPanel {...DESCRIPTION_PANELS.traceroute} />
     </div>
   );
-};
-
-export default page;
+}

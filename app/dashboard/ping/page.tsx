@@ -1,13 +1,14 @@
-import PingCard from "@/app/components/Ping/PingCard";
-import PingTables from "@/app/dashboard/ping/PingTables";
-import React from "react";
+import ResultsList from "@/components/results-list";
+import { MOCK_PING, PING_COLUMNS } from "@/lib/constants";
 
-const page = () => {
+export default function PingPage() {
   return (
-    <div className='mt-5'>
-      <PingTables />
+    <div className="mt-5">
+      <ResultsList
+        title="Ping Server"
+        results={MOCK_PING}
+        columns={PING_COLUMNS}
+      />
     </div>
   );
-};
-
-export default page;
+}

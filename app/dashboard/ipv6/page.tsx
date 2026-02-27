@@ -1,13 +1,14 @@
-import IPv6Surface from "@/app/components/IPv6/IPv6Surface";
-import React from "react";
-import IPv6Tables from "./Ipv6Tables";
+import ResultsList from "@/components/results-list";
+import { MOCK_IPV6, IPV6_COLUMNS } from "@/lib/constants";
 
-const page = () => {
+export default function Ipv6Page() {
   return (
     <div className="mt-5">
-      <IPv6Tables />
+      <ResultsList
+        title="IPv6 Connectivity Test"
+        results={MOCK_IPV6}
+        columns={IPV6_COLUMNS}
+      />
     </div>
   );
-};
-
-export default page;
+}

@@ -1,11 +1,9 @@
-import AboutCard from "./components/About/AboutCard";
+import FeatureGrid from "@/components/feature-grid";
+
 export default function Home() {
   return (
-    <>
-      {/* Add other home page content here */}
-      <section className='mt-3'>
-        <AboutCard />
-      </section>
-    </>
+    <section className="mt-3">
+      <FeatureGrid />
+    </section>
   );
 }

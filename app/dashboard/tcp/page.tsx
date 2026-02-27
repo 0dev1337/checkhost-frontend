@@ -1,13 +1,14 @@
-import TcpSurface from "@/app/components/Tcp/TcpSurface";
-import React from "react";
-import TcpTables from "./TcpTables";
+import ResultsList from "@/components/results-list";
+import { MOCK_TCP, TCP_COLUMNS } from "@/lib/constants";
 
-const page = () => {
+export default function TcpPage() {
   return (
     <div className="mt-5">
-      <TcpTables />
+      <ResultsList
+        title="TCP Connect"
+        results={MOCK_TCP}
+        columns={TCP_COLUMNS}
+      />
     </div>
   );
-};
-
-export default page;
+}

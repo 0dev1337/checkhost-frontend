@@ -1,13 +1,14 @@
-import BGPSurface from "@/app/components/BGP/BGPSurface";
-import React from "react";
-import BgpTables from "./BgpTables";
+import ResultsList from "@/components/results-list";
+import { MOCK_BGP, BGP_COLUMNS } from "@/lib/constants";
 
-const page = () => {
+export default function BgpPage() {
   return (
     <div className="mt-5">
-      <BgpTables />
+      <ResultsList
+        title="BGP Path Lookup"
+        results={MOCK_BGP}
+        columns={BGP_COLUMNS}
+      />
     </div>
   );
-};
-
-export default page;
+}

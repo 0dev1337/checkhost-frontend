@@ -1,12 +1,10 @@
-import UdpSurface from "@/app/components/Udp/UdpSurface";
-import React from "react";
+import DescriptionPanel from "@/components/description-panel";
+import { DESCRIPTION_PANELS } from "@/lib/constants";
 
-const page = () => {
+export default function UdpPage() {
   return (
-    <div className='mt-5'>
-      <UdpSurface />
+    <div className="mt-5">
+      <DescriptionPanel {...DESCRIPTION_PANELS.udp} />
     </div>
   );
-};
-
-export default page;
+}

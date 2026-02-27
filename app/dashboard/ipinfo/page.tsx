@@ -1,14 +1,11 @@
-import InfoCard from "@/app/components/IPInfo/InfoCard";
-import Results from "./results";
-import Whois from "./whois";
+import Results from "./_components/results";
+import Whois from "./_components/whois";
 
-const page = () => {
+export default function IpInfoPage() {
   return (
     <div className="mt-5 space-y-5">
       <Results />
       <Whois />
     </div>
   );
-};
-
-export default page;
+}
