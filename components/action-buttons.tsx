@@ -17,8 +17,7 @@ export default function ActionButtons() {
               key={tab.href}
               variant="tertiary"
               className="whitespace-nowrap"
-              onClick={() => router.push(tab.href)}
-            >
+              onClick={() => router.push(tab.href)}>
               {tab.label}
             </Button>
           ))}
@@ -29,15 +28,13 @@ export default function ActionButtons() {
       <div className="hidden sm:block">
         <ButtonGroup
           fullWidth
-          variant="tertiary"
-          className="w-full [&>button:first-child]:rounded-none [&>button:last-child]:rounded-none"
-        >
+          variant="ghost"
+          className="w-full [&>button:first-child]:rounded-none [&>button:last-child]:rounded-none">
           {NAV_TABS.map((tab) => (
             <Button
               key={tab.href}
               className="flex-1 min-w-0"
-              onClick={() => router.push(tab.href)}
-            >
+              onClick={() => router.push(tab.href)}>
               {tab.label}
             </Button>
           ))}

@@ -9,8 +9,7 @@ export default function SearchSurface() {
     <div className="flex justify-center px-4">
       <Surface
         variant="default"
-        className="w-full max-w-4xl sm:max-w-4xl rounded-4xl p-4 sm:p-6 min-w-0"
-      >
+        className="w-full max-w-4xl sm:max-w-4xl 4xl p-4 sm:p-6 min-w-0 border border-dashed border-indigo-300/40">
         <div className="flex flex-row gap-4 items-start">
           <Image
             src={LogoDark}

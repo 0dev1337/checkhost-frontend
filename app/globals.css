@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@heroui/styles";
-
+@import 'leaflet/dist/leaflet.css';
 /*
  * HeroUI Theme Customization
  * Add this to your global.css after importing @heroui/styles
@@ -99,3 +99,5 @@
     display: none;              /* Chrome/Safari */
   }
 }
+
+

@@ -43,10 +43,9 @@ export default function Whois({ onClose }: WhoisProps) {
   const { data, loading, error, fetchWhois, reset } = useWhois();
 
   return (
-    <div className="flex justify-center px-4">
-      <Surface
-        className="w-full max-w-4xl rounded-4xl p-4 sm:p-6 min-h-[200px] flex flex-col border border-dashed border-indigo-300/40"
-        variant="default">
+    <Surface
+      className="w-full min-w-0 p-4 sm:p-6 min-h-[200px] flex flex-col border border-dashed border-indigo-300/40"
+      variant="default">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -122,7 +121,6 @@ export default function Whois({ onClose }: WhoisProps) {
             ))}
           </div>
         )}
-      </Surface>
-    </div>
+    </Surface>
   );
 }
