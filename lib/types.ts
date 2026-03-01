@@ -4,37 +4,67 @@
 
 /** IP-API geo-location response shape. */
 export interface IPAPI {
-  ip: string;
+  query: string;
   hostname: string;
   city: string;
-  region: string;
+  regionName: string;
+  countryCode: string;
   country: string;
-  country_name: string;
-  latitude: number;
-  longitude: number;
+  lat: number;
+  lon: number;
   org: string;
-  postal: string;
+  zip: string;
   timezone: string;
-}
-
-/** ipinfo.io response shape. */
-export interface IPInfo {
-  ip: string;
-  hostname: string;
-  city: string;
-  region: string;
-  country: string;
-  loc: string;
-  org: string;
-  postal: string;
-  timezone: string;
+  isp : string;
+  as : string;
 }
 
 /** Combined backend response from `/info`. */
 export interface InfoResponse {
   ipapi: IPAPI;
-  ipinfo: IPInfo;
 }
+
+
+
+/// Whois response types (from `whois-json` package, see backend/internal/handler/whois.go)
+interface Whois {
+  "abuse-c": string;
+  "abuse-mailbox": string[];
+  address: string[];
+  "admin-c": string[];
+  auth: string;
+  country: string[];
+  descr: string[];
+  "e-mail": string[];
+  "fax-no": string;
+  inetnum: string;
+  irt: string;
+  "last-modified": string[];
+  "mnt-by": string[];
+  "mnt-irt": string;
+  "mnt-lower": string;
+  "mnt-ref": string;
+  "mnt-routes": string;
+  netname: string;
+  "nic-hdl": string[];
+  org: string;
+  "org-name": string;
+  "org-type": string;
+  organisation: string;
+  origin: string;
+  phone: string[];
+  remarks: string[];
+  role: string[];
+  route: string;
+  source: string[];
+  status: string;
+  "tech-c": string[];
+}
+
+export interface WhoisResponse {
+  whois: Whois;
+}
+
 
 /* ------------------------------------------------------------------ */
 /*  Result-table row types                                            */

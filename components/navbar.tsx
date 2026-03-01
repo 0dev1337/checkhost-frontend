@@ -13,10 +13,10 @@ export default function Navbar() {
 
   useEffect(() => {
     apiClient
-      .get<InfoResponse>("/info")
+      .get<InfoResponse>("/ipinfo")
       .then((res) => {
-        const info = res.data.ipapi ?? res.data.ipinfo;
-        setIp(info?.ip ?? "Unknown");
+        const info = res.data.ipapi;
+        setIp(info?.query ?? "Unknown");
         setCountry(info?.country ?? "Unknown");
       })
       .catch(() => {
@@ -30,8 +30,7 @@ export default function Navbar() {
       <button
         type="button"
         onClick={() => setIsVisible((prev) => !prev)}
-        aria-label={isVisible ? "Hide IP information" : "Show IP information"}
-      >
+        aria-label={isVisible ? "Hide IP information" : "Show IP information"}>
         <Image
           src={eye}
           alt=""
@@ -43,9 +42,7 @@ export default function Navbar() {
         IP: {isVisible ? ip : "x.x.x.x"}
       </p>
 
-      <p className="text-base">
-        Country: {isVisible ? country : "Redacted"}
-      </p>
+      <p className="text-base">Country: {isVisible ? country : "Redacted"}</p>
     </div>
   );
 }

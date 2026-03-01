@@ -16,7 +16,7 @@ export function useInfo() {
 
   useEffect(() => {
     apiClient
-      .get<InfoResponse>("/info")
+      .get<InfoResponse>("/ipinfo")
       .then((res) => setData(res.data))
       .catch((err: Error) => setError(err))
       .finally(() => setLoading(false));
